@@ -1,0 +1,6 @@
+{
+  "goldSymbols": ["EVN.AX", "GOR.AX"],
+  "mineralSymbols": ["PLS.AX"],
+  "ETFSymbols": ["VAS.AX", "VDHG.AX"],
+  "ETFOtherSymbols": ["NDQ.AX", "DHHF.AX", "ETHI.AX", "GEAR.AX"]
+}
