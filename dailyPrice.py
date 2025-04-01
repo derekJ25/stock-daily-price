@@ -4,7 +4,7 @@ import datetime
 import yfinance as yf
 import shutil
 
-symbolJSONFilePath = "./python/stock-prices/stockSymbols.json"
+symbolJSONFilePath = "./python/stock-daily-price/stockSymbols.json"
 STOCKSYMBOLINDEX = 0
 STOCKPRECISION = 3
 THREEDECIMALPOINTFORMAT = "{:.3f}"
