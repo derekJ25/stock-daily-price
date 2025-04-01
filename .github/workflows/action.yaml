@@ -1,11 +1,10 @@
 name: run dailyPrice.py
 
 on:
-  schedule:
-    - cron: "0 10-16 * * 1-5" # At every hour from 10-16 from Monday to Friday
+  schedule:?0-16 * * 1-5" # At every hour from 10-16 from Monday to Friday
   push:
-    tags:
-      - ‘commit/*’
+    branches:
+      - main
 
 jobs:
   build:
