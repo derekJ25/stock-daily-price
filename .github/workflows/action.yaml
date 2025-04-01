@@ -1,9 +1,7 @@
 name: run dailyPrice.py
 
 on:
-  schedule:
-    - cron: "0 10-17 * * 1-5" # At every hour from 10-17 from Monday to Friday
-
+  push: "main"
 jobs:
   build:
     runs-on: ubuntu-latest
