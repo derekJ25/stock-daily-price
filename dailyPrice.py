@@ -4,7 +4,7 @@ import datetime
 import yfinance as yf
 import shutil
 
-symbolJSONFilePath = "./python/stock-daily-price/stockSymbols.json"
+symbolJSONFilePath = "./stockSymbols.json"
 STOCKSYMBOLINDEX = 0
 STOCKPRECISION = 3
 THREEDECIMALPOINTFORMAT = "{:.3f}"
@@ -22,12 +22,12 @@ def getTickerObject(symbol):
     return yf.Ticker(symbol)
 
 def checkFolderExists(key):
-    keyFolderFilePath = "./python/stock-prices/" + key 
+    keyFolderFilePath = key 
     if not os.path.exists(keyFolderFilePath):
         os.makedirs(keyFolderFilePath)
 
 def createSymbolDailyPriceFile(key, symbol):
-    filePath = "./python/stock-prices/" + key + "/" + getSymbol(symbol) + "DailyPrices.txt"
+    filePath = key + "/" + getSymbol(symbol) + "DailyPrices.txt"
     appendWrite = "a+" if os.path.exists(filePath) == True else "w"
     with open(filePath, appendWrite) as file:
             if appendWrite == "w":
@@ -49,7 +49,7 @@ def deleteAllFolders(JSONFilePath):
         data = json.load(jsonFile)
 
     for key, value in data.items():
-        keyFolderFilePath = "./python/stock-prices/" + key 
+        keyFolderFilePath = key 
         if os.path.exists(keyFolderFilePath):
             shutil.rmtree(keyFolderFilePath)
 
