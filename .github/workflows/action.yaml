@@ -1,9 +1,8 @@
 name: run dailyPrice.py
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: "0 10-16 * * 1-5" # At every hour from 10-16 from Monday to Friday
 
 jobs:
   build:
