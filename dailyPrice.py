@@ -59,6 +59,7 @@ def startProgram():
     else:
         print("JSON file path not found. Please try again.")
 
-startProgram()
+if __name__ == "__main__":
+    startProgram()
 
 # deleteAllFolders(symbolJSONFilePath)
