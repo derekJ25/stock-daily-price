@@ -1,9 +1,6 @@
 name: run dailyPrice.py
 
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   build:
